@@ -6,14 +6,23 @@ namespace LotusOrganiser.Entities
     public sealed class ToDoListItem
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public long ItemId { get; set; }
+        public string id { get; set; }
 
-        [Required]
-        [MaxLength(255)]
-        public string Name { get; set; }
+        public string type { get; set; }
 
-        public bool Completed { get; set; }
+        public string text { get; set; }
+
+        public string msisdn { get; set; }
+
+        public string url { get; set; }
+
+        public string value { get; set; }
+
+        public int width { get; set; }
+
+        public int height { get; set; }
+
+        public string caption { get; set; }
 
         public long BusinessId { get; set; }
 
