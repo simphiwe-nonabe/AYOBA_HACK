@@ -17,8 +17,13 @@ namespace LotusOrganiser.Entities
 
         public long BusinessId { get; set; }
 
+        public long UserId { get; set; }
+
         [ForeignKey(nameof(BusinessId))]
         public Business Business { get; set; }
+
+        [ForeignKey(nameof(UserId))]
+        public User User { get; set; }
 
     }
 }

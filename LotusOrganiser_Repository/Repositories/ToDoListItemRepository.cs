@@ -42,6 +42,15 @@ namespace LotusOrganiser_Repository.Repositories
 
                 item.Business = business;
 
+                User? user = await _context.Users.FindAsync(item.UserId);
+
+                if (user == null)
+                {
+                    throw new Exception($"ToDo list item can not be created without assignee user. Please create user first");
+                }
+
+                item.User = user;
+
                 await _context.ToDoListItems.AddAsync(item);
                 await _context.SaveChangesAsync();
                 return item;
