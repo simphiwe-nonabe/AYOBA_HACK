@@ -42,63 +42,41 @@ namespace LotusOrganiser_Repository.Repositories
 
                 item.Business = business;
 
+                User? user = await _context.Users.FindAsync(item.UserId);
+
+                if (user == null)
+                {
+                    throw new Exception($"ToDo list item can not be created without assignee user. Please create user first");
+                }
+
+                item.User = user;
+
                 await _context.ToDoListItems.AddAsync(item);
                 await _context.SaveChangesAsync();
                 return item;
             }
             catch (Exception exception)
             {
-                _logger.LogError(exception, "Unable to add ToDoListItem - {name}", item.Name);
+                _logger.LogError(exception, "Unable to add ToDoListItem - {name}", item.id);
                 throw;
             }
         }
 
-        public async Task<ToDoListItem?> GetToDoListItemByIdAsync(long itemId)
+        public async Task<ToDoListItem?> GetToDoListItemByIdAsync(string itemId)
         {
             return await _context.ToDoListItems
                 .Include(item => item.Business)
-                .FirstOrDefaultAsync(item => item.ItemId == itemId) ?? null;
+                .FirstOrDefaultAsync(item => item.id == itemId) ?? null;
         }
 
-        public async Task<ToDoListItem?> UpdateToDoListItemAsync(long id, ToDoListItem updatedItem)
-        {
-            try
-            {
-                ToDoListItem? item = await _context.ToDoListItems.FindAsync(id);
 
-                if (item == null)
-                {
-                    return null;
-                }
-
-                Business? business = await
-                    _businessRepository.GetBusinessByIdAsync(updatedItem.BusinessId);
-                if (business == null)
-                {
-                    throw new Exception($"Business with id - {updatedItem.BusinessId} does not exist. Please make assignee business");
-                }
-
-                item.Name = updatedItem.Name;
-                item.Completed = updatedItem.Completed;
-                item.Business = business;
-
-                await _context.SaveChangesAsync();
-                return item;
-            }
-            catch (Exception exception)
-            {
-                _logger.LogError(exception, "Unable to update item with id - {id}", updatedItem.ItemId);
-                throw;
-            }
-        }
-
-        public async Task<ToDoListItem?> DeleteToDoListItemAsync(long id)
+        public async Task<ToDoListItem?> DeleteToDoListItemAsync(string id)
         {
             try
             {
                 ToDoListItem? item = await _context.ToDoListItems
                     .Include(item => item.Business).
-                    FirstOrDefaultAsync(item => item.ItemId == id) ?? null;
+                    FirstOrDefaultAsync(item => item.id == id) ?? null;
 
                 if (item == null)
                 {

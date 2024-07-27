@@ -8,10 +8,8 @@ namespace LotusOrganiser_Repository.Interfaces
 
         public Task<ToDoListItem> CreateToDoListItemAsync(ToDoListItem item);
 
-        public Task<ToDoListItem?> GetToDoListItemByIdAsync(long itemId);
+        public Task<ToDoListItem?> GetToDoListItemByIdAsync(string itemId);
 
-        public Task<ToDoListItem?> UpdateToDoListItemAsync(long id, ToDoListItem updatedItem);
-
-        public Task<ToDoListItem?> DeleteToDoListItemAsync(long id);
+        public Task<ToDoListItem?> DeleteToDoListItemAsync(string id);
     }
 }
