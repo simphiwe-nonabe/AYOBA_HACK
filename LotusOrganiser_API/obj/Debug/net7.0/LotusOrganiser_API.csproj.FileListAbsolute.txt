@@ -323,3 +323,4 @@ C:\Users\simphiwe.nonabe\Hackathon\AYOBA_HACK\LotusOrganiser_API\obj\Debug\net7.
 C:\Users\simphiwe.nonabe\Hackathon\AYOBA_HACK\LotusOrganiser_API\obj\Debug\net7.0\LotusOrganiser_API.pdb
 C:\Users\simphiwe.nonabe\Hackathon\AYOBA_HACK\LotusOrganiser_API\obj\Debug\net7.0\LotusOrganiser_API.genruntimeconfig.cache
 C:\Users\simphiwe.nonabe\Hackathon\AYOBA_HACK\LotusOrganiser_API\obj\Debug\net7.0\ref\LotusOrganiser_API.dll
+C:\Users\simphiwe.nonabe\Hackathon\AYOBA_HACK\LotusOrganiser_API\obj\Debug\net7.0\LotusOrganiser_API.sourcelink.json

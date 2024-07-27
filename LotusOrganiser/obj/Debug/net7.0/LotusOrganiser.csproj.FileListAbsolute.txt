@@ -47,3 +47,4 @@ C:\Users\simphiwe.nonabe\Hackathon\AYOBA_HACK\LotusOrganiser\obj\Debug\net7.0\Lo
 C:\Users\simphiwe.nonabe\Hackathon\AYOBA_HACK\LotusOrganiser\obj\Debug\net7.0\refint\LotusOrganiser.dll
 C:\Users\simphiwe.nonabe\Hackathon\AYOBA_HACK\LotusOrganiser\obj\Debug\net7.0\LotusOrganiser.pdb
 C:\Users\simphiwe.nonabe\Hackathon\AYOBA_HACK\LotusOrganiser\obj\Debug\net7.0\ref\LotusOrganiser.dll
+C:\Users\simphiwe.nonabe\Hackathon\AYOBA_HACK\LotusOrganiser\obj\Debug\net7.0\LotusOrganiser.sourcelink.json

@@ -28,10 +28,9 @@ namespace LotusOrganiser_API.Controllers
         [SwaggerOperation(OperationId = nameof(CreateToDoListItem))]
         [SwaggerResponse(StatusCodes.Status400BadRequest)]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(IEnumerable<ToDoListItem>))]
-        public async Task<IActionResult> CreateToDoListItem([FromBody] ToDoListItemCreationModel item)
+        public async Task<IActionResult> CreateToDoListItem([FromBody] ToDoListItem item)
         {
-            ToDoListItem mappedItem = _mapper.Map<ToDoListItem>(item);
-            ToDoListItem result = await _itemRepository.CreateToDoListItemAsync(mappedItem);
+            ToDoListItem result = await _itemRepository.CreateToDoListItemAsync(item);
             return Ok(result);
         }
 
@@ -47,25 +46,12 @@ namespace LotusOrganiser_API.Controllers
             return Ok(mappedResult);
         }
 
-        [HttpPut]
-        [Route("UpdateToDoListItem/{id:long}")]
-        [SwaggerOperation(OperationId = nameof(UpdateToDoListItem))]
-        [SwaggerResponse(StatusCodes.Status400BadRequest)]
-        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(IEnumerable<ToDoListItem>))]
-        public async Task<IActionResult> UpdateToDoListItem([FromRoute] long id, [FromBody] ToDoListItemCreationModel itemToUpdate)
-        {
-            ToDoListItem mappedItem = _mapper.Map<ToDoListItem>(itemToUpdate);
-
-            ToDoListItem? updatedItem = await _itemRepository.UpdateToDoListItemAsync(id, mappedItem);
-            return updatedItem == null ? NotFound() : Ok(updatedItem);
-        }
-
         [HttpDelete]
         [Route("DeleteToDoListItem")]
         [SwaggerOperation(OperationId = nameof(DeleteToDoListItem))]
         [SwaggerResponse(StatusCodes.Status400BadRequest)]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(IEnumerable<ToDoListItem>))]
-        public async Task<IActionResult> DeleteToDoListItem(long id)
+        public async Task<IActionResult> DeleteToDoListItem(string id)
         {
             ToDoListItem? deletedItem = await _itemRepository.DeleteToDoListItemAsync(id);
             return deletedItem == null ? NotFound() : Ok(deletedItem);
@@ -77,7 +63,7 @@ namespace LotusOrganiser_API.Controllers
         [SwaggerOperation(OperationId = nameof(GetToDoListItemById))]
         [SwaggerResponse(StatusCodes.Status400BadRequest)]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(IEnumerable<ToDoListItemViewModel>))]
-        public async Task<IActionResult> GetToDoListItemById([FromRoute] long id)
+        public async Task<IActionResult> GetToDoListItemById([FromRoute] string id)
         {
             ToDoListItem? item = await _itemRepository.GetToDoListItemByIdAsync(id);
             if (item == null)

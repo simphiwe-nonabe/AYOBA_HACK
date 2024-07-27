@@ -9,14 +9,16 @@ namespace LotusOrganiser_API.Models.ToDoListItem
             Name = default!;
             Completed = false;
             BusinessId = default!;
+            UserId = default!;
         }
 
         [JsonConstructor]
-        public ToDoListItemCreationModel(string name, bool completed , long businessId)
+        public ToDoListItemCreationModel(string name, bool completed , long businessId, long userId)
         {
             Name = name;
             Completed = completed;
             BusinessId = businessId!;
+            UserId = userId!;
         }
 
         public string Name { get; set; }
@@ -24,5 +26,7 @@ namespace LotusOrganiser_API.Models.ToDoListItem
         public bool Completed { get; set; }
 
         public long BusinessId { get; set; }
+
+        public long UserId { get; set; }
     }
 }
