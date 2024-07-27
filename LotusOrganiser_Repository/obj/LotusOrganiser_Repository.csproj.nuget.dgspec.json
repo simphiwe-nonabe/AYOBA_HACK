@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\simphiwe.nonabe\\Hackathon\\AYOBA_HACK\\LotusOrganiser_Repository\\LotusOrganiser_Repository.csproj": {}
+    "C:\\PRACTICE\\Hacks\\AYOBA_HACK\\LotusOrganiser_Repository\\LotusOrganiser_Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\simphiwe.nonabe\\Hackathon\\AYOBA_HACK\\LotusOrganiser\\LotusOrganiser.csproj": {
+    "C:\\PRACTICE\\Hacks\\AYOBA_HACK\\LotusOrganiser\\LotusOrganiser.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simphiwe.nonabe\\Hackathon\\AYOBA_HACK\\LotusOrganiser\\LotusOrganiser.csproj",
+        "projectUniqueName": "C:\\PRACTICE\\Hacks\\AYOBA_HACK\\LotusOrganiser\\LotusOrganiser.csproj",
         "projectName": "LotusOrganiser",
-        "projectPath": "C:\\Users\\simphiwe.nonabe\\Hackathon\\AYOBA_HACK\\LotusOrganiser\\LotusOrganiser.csproj",
-        "packagesPath": "C:\\Users\\simphiwe.nonabe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simphiwe.nonabe\\Hackathon\\AYOBA_HACK\\LotusOrganiser\\obj\\",
+        "projectPath": "C:\\PRACTICE\\Hacks\\AYOBA_HACK\\LotusOrganiser\\LotusOrganiser.csproj",
+        "packagesPath": "C:\\Users\\NjabuloNtuli\\.nuget\\packages\\",
+        "outputPath": "C:\\PRACTICE\\Hacks\\AYOBA_HACK\\LotusOrganiser\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\simphiwe.nonabe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NjabuloNtuli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -35,11 +38,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -62,40 +60,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\simphiwe.nonabe\\Hackathon\\AYOBA_HACK\\LotusOrganiser_Repository\\LotusOrganiser_Repository.csproj": {
+    "C:\\PRACTICE\\Hacks\\AYOBA_HACK\\LotusOrganiser_Repository\\LotusOrganiser_Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simphiwe.nonabe\\Hackathon\\AYOBA_HACK\\LotusOrganiser_Repository\\LotusOrganiser_Repository.csproj",
+        "projectUniqueName": "C:\\PRACTICE\\Hacks\\AYOBA_HACK\\LotusOrganiser_Repository\\LotusOrganiser_Repository.csproj",
         "projectName": "LotusOrganiser_Repository",
-        "projectPath": "C:\\Users\\simphiwe.nonabe\\Hackathon\\AYOBA_HACK\\LotusOrganiser_Repository\\LotusOrganiser_Repository.csproj",
-        "packagesPath": "C:\\Users\\simphiwe.nonabe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simphiwe.nonabe\\Hackathon\\AYOBA_HACK\\LotusOrganiser_Repository\\obj\\",
+        "projectPath": "C:\\PRACTICE\\Hacks\\AYOBA_HACK\\LotusOrganiser_Repository\\LotusOrganiser_Repository.csproj",
+        "packagesPath": "C:\\Users\\NjabuloNtuli\\.nuget\\packages\\",
+        "outputPath": "C:\\PRACTICE\\Hacks\\AYOBA_HACK\\LotusOrganiser_Repository\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\simphiwe.nonabe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NjabuloNtuli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,15 +91,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\simphiwe.nonabe\\Hackathon\\AYOBA_HACK\\LotusOrganiser\\LotusOrganiser.csproj": {
-                "projectPath": "C:\\Users\\simphiwe.nonabe\\Hackathon\\AYOBA_HACK\\LotusOrganiser\\LotusOrganiser.csproj"
+              "C:\\PRACTICE\\Hacks\\AYOBA_HACK\\LotusOrganiser\\LotusOrganiser.csproj": {
+                "projectPath": "C:\\PRACTICE\\Hacks\\AYOBA_HACK\\LotusOrganiser\\LotusOrganiser.csproj"
               }
             }
           }
@@ -120,11 +107,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -141,26 +123,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
