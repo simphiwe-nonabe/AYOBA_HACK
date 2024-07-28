@@ -1,17 +1,17 @@
 using AutoMapper;
 using LotusOrganiser.Entities;
-using LotusOrganiser_API.Models.ToDoListItem;
+using LotusOrganiser_API.Models.Message;
 
 namespace LotusOrganiser_API.Mapping
 {
-    internal sealed class ToDoListItemProfile : Profile
+    internal sealed class MessageProfile : Profile
     {
-        public ToDoListItemProfile()
+        public MessageProfile()
         {
-            CreateMap<ToDoListItem, ToDoListItemViewModel>()
+            CreateMap<Message, MessageViewModel>()
                 .ForMember(m => m.BusinessName, opt => opt.MapFrom(e => e.Business.Name));
 
-            CreateMap<ToDoListItemCreationModel, ToDoListItem>()
+            CreateMap<MessageCreationModel, Message>()
                 .ForMember(m => m.BusinessId, opt => opt.MapFrom(e => e.BusinessId));
 
         }

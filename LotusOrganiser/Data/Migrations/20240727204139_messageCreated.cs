@@ -12,19 +12,19 @@ namespace LotusOrganiser.Migrations
         {
             migrationBuilder.AddColumn<long>(
                 name: "UserId",
-                table: "ToDoListItems",
+                table: "Messages",
                 type: "bigint",
                 nullable: false,
                 defaultValue: 0L);
 
             migrationBuilder.CreateIndex(
-                name: "IX_ToDoListItems_UserId",
-                table: "ToDoListItems",
+                name: "IX_Messages_UserId",
+                table: "Messages",
                 column: "UserId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_ToDoListItems_Users_UserId",
-                table: "ToDoListItems",
+                name: "FK_Messages_Users_UserId",
+                table: "Messages",
                 column: "UserId",
                 principalTable: "Users",
                 principalColumn: "UserId",
@@ -35,16 +35,16 @@ namespace LotusOrganiser.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_ToDoListItems_Users_UserId",
-                table: "ToDoListItems");
+                name: "FK_Messages_Users_UserId",
+                table: "Messages");
 
             migrationBuilder.DropIndex(
-                name: "IX_ToDoListItems_UserId",
-                table: "ToDoListItems");
+                name: "IX_Messages_UserId",
+                table: "Messages");
 
             migrationBuilder.DropColumn(
                 name: "UserId",
-                table: "ToDoListItems");
+                table: "Messages");
         }
     }
 }

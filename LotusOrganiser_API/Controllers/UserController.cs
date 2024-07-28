@@ -26,10 +26,10 @@ namespace LotusOrganiser_API.Controllers
         [SwaggerOperation(OperationId = nameof(AddUser))]
         [SwaggerResponse(StatusCodes.Status400BadRequest)]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(IEnumerable<User>))]
-        public async Task<IActionResult> AddUser([FromBody] UserCreationModel user)
+        public async Task<IActionResult> AddUser([FromBody] User user)
         {
-            User mappedUser = _mapper.Map<User>(user);
-            User result = await _userRepository.AddUserAsync(mappedUser);
+            //User mappedUser = _mapper.Map<User>(user);
+            User result = await _userRepository.AddUserAsync(user);
             return Ok(result);
         }
 
@@ -37,12 +37,12 @@ namespace LotusOrganiser_API.Controllers
         [Route("GetAllUsers")]
         [SwaggerOperation(OperationId = nameof(GetAllUsers))]
         [SwaggerResponse(StatusCodes.Status400BadRequest)]
-        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(IEnumerable<UserViewModel>))]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(IEnumerable<User>))]
         public async Task<IActionResult> GetAllUsers()
         {
             IEnumerable<User> users = await _userRepository.GetAllUsersAsync();
-            List<UserViewModel> mappedResult = users.Select(_mapper.Map<UserViewModel>).ToList();
-            return Ok(mappedResult);
+            //List<UserViewModel> mappedResult = users.Select(_mapper.Map<UserViewModel>).ToList();
+            return Ok(users);
         }
 
         [HttpPut]

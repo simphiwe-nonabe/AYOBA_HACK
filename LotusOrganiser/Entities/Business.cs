@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LotusOrganiser.Entities
@@ -12,5 +13,21 @@ namespace LotusOrganiser.Entities
         [Required]
         [MaxLength(50)]
         public string Name { get; set; }
+
+        [Required]
+        [MaxLength(50)]
+        public string msisdn { get; set; }
+
+
+        [Required]
+        [MaxLength(50)]
+        public string VATNumber { get; set; }
+
+   
+        public string url { get; set; }
+
+        [DefaultValue(typeof(DateTime), "")]
+        public DateTime requestTime { get; set; } = DateTime.Now;
+
     }
 }

@@ -11,7 +11,7 @@ namespace LotusOrganiser.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "ToDoListItems",
+                name: "Messages",
                 columns: table => new
                 {
                     ItemId = table.Column<long>(type: "bigint", nullable: false)
@@ -21,7 +21,7 @@ namespace LotusOrganiser.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ToDoListItems", x => x.ItemId);
+                    table.PrimaryKey("PK_Messages", x => x.ItemId);
                 });
         }
 
@@ -29,7 +29,7 @@ namespace LotusOrganiser.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ToDoListItems");
+                name: "Messages");
         }
     }
 }

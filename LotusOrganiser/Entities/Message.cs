@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LotusOrganiser.Entities
 {
-    public sealed class ToDoListItem
+    public sealed class Message
     {
         [Key]
         public string id { get; set; }
@@ -23,6 +24,9 @@ namespace LotusOrganiser.Entities
         public int height { get; set; }
 
         public string caption { get; set; }
+
+        [DefaultValue(typeof(DateTime), "")]
+        public DateTime requestTime { get; set; } = DateTime.Now;
 
         public long BusinessId { get; set; }
 

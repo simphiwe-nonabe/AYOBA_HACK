@@ -83,7 +83,7 @@ namespace LotusOrganiser.Migrations
                     b.ToTable("Subscriptions");
                 });
 
-            modelBuilder.Entity("LotusOrganiser.Entities.ToDoListItem", b =>
+            modelBuilder.Entity("LotusOrganiser.Entities.Message", b =>
                 {
                     b.Property<long>("ItemId")
                         .ValueGeneratedOnAdd()
@@ -101,7 +101,7 @@ namespace LotusOrganiser.Migrations
 
                     b.HasKey("ItemId");
 
-                    b.ToTable("ToDoListItems");
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("LotusOrganiser.Entities.Subscription", b =>

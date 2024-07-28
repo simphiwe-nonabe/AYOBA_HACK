@@ -1,10 +1,10 @@
 using System.Text.Json.Serialization;
 
-namespace LotusOrganiser_API.Models.ToDoListItem
+namespace LotusOrganiser_API.Models.Message
 {
-    public class ToDoListItemCreationModel
+    public class MessageCreationModel
     {
-        private ToDoListItemCreationModel()
+        private MessageCreationModel()
         {
             Name = default!;
             Completed = false;
@@ -13,7 +13,7 @@ namespace LotusOrganiser_API.Models.ToDoListItem
         }
 
         [JsonConstructor]
-        public ToDoListItemCreationModel(string name, bool completed , long businessId, long userId)
+        public MessageCreationModel(string name, bool completed , long businessId, long userId)
         {
             Name = name;
             Completed = completed;

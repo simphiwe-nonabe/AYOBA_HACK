@@ -65,7 +65,7 @@ namespace LotusOrganiser.Migrations
                     b.ToTable("Subscriptions");
                 });
 
-            modelBuilder.Entity("LotusOrganiser.Entities.ToDoListItem", b =>
+            modelBuilder.Entity("LotusOrganiser.Entities.Message", b =>
                 {
                     b.Property<long>("ItemId")
                         .ValueGeneratedOnAdd()
@@ -88,7 +88,7 @@ namespace LotusOrganiser.Migrations
 
                     b.HasIndex("BusinessId");
 
-                    b.ToTable("ToDoListItems");
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("LotusOrganiser.Entities.User", b =>
@@ -128,7 +128,7 @@ namespace LotusOrganiser.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("LotusOrganiser.Entities.ToDoListItem", b =>
+            modelBuilder.Entity("LotusOrganiser.Entities.Message", b =>
                 {
                     b.HasOne("LotusOrganiser.Entities.Business", "Business")
                         .WithMany()

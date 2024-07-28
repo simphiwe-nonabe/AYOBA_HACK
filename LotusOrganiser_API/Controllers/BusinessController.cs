@@ -27,10 +27,10 @@ namespace LotusOrganiser_API.Controllers
         [SwaggerOperation(OperationId = nameof(CreateBusiness))]
         [SwaggerResponse(StatusCodes.Status400BadRequest)]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(IEnumerable<Business>))]
-        public async Task<IActionResult> CreateBusiness([FromBody] BusinessCreationModel business)
+        public async Task<IActionResult> CreateBusiness([FromBody] Business business)
         {
-            Business mappedBusiness = _mapper.Map<Business>(business);
-            Business result = await _businessRepository.CreateBusinessAsync(mappedBusiness);
+            //Business mappedBusiness = _mapper.Map<Business>(business);
+            Business result = await _businessRepository.CreateBusinessAsync(business);
             return Ok(result);
         }
 
@@ -38,12 +38,12 @@ namespace LotusOrganiser_API.Controllers
         [Route("GetAllBusinesses")]
         [SwaggerOperation(OperationId = nameof(GetAllBusinesses))]
         [SwaggerResponse(StatusCodes.Status400BadRequest)]
-        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(IEnumerable<BusinessViewModel>))]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(IEnumerable<Business>))]
         public async Task<IActionResult> GetAllBusinesses()
         {
             IEnumerable<Business> result = await _businessRepository.GetAllBusinessesAsync();
-            List<BusinessViewModel> mappedResult = result.Select(_mapper.Map<BusinessViewModel>).ToList();
-            return Ok(mappedResult);
+            //List<BusinessViewModel> mappedResult = result.Select(_mapper.Map<BusinessViewModel>).ToList();
+            return Ok(result);
         }
 
         [HttpPut]

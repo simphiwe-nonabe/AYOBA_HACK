@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace LotusOrganiser.Entities
 {
@@ -17,5 +18,13 @@ namespace LotusOrganiser.Entities
         [Required]
         [MaxLength(50)]
         public string Name { get; set; }
+
+        [Required]
+        [MaxLength(50)]
+        public string msisdn { get; set; }
+
+        [DefaultValue(typeof(DateTime), "")]
+        public DateTime requestTime { get; set; } = DateTime.Now;
+
     }
 }

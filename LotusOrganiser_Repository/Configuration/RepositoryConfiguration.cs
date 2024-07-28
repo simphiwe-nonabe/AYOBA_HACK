@@ -12,7 +12,7 @@ namespace LotusOrganiser_Repository.Configuration
             services.TryAddTransient<IBusinessRepository, BusinessRepository>();
             services.TryAddTransient<ISubscriptionRepository, SubscriptionRepository>();
             services.TryAddTransient<IUserRepository, UserRepository>();
-            services.TryAddTransient<IToDoListItemRepository, ToDoListItemRepository>();
+            services.TryAddTransient<IMessageRepository, MessageRepository>();
         }
     }
 }
